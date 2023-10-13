@@ -1,0 +1,71 @@
+@import '~payload/scss';
+
+.chip {
+  border-radius: 50%;
+  border: $style-stroke-width-m solid #fff;
+  height: base(1.25);
+  width: base(1.25);
+  margin-right: base(.5);
+  box-shadow: none;
+
+  &--selected {
+    box-shadow: 0 0 0 $style-stroke-width-m $color-dark-gray;
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+}
+
+.color-field {
+  width: auto;
+  .color-swatch {
+   width: 2.5rem;
+   height: auto;
+    border: solid 1px var(--theme-elevation-150);
+    border-radius: 8px;
+    margin-right: 8px;
+  }
+   .__input-row {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+   }
+   .field-type.text {
+        margin-bottom: 0;   
+        height: 100%; 
+        &::before {
+            content: "#";
+            position: absolute;
+            left: .5em;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .6;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        input.color-input {
+            padding-left: 2em;
+           }
+   }
+   .color-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0;
+   }
+
+   .popup__wrapper {
+    height: 100%;
+   }
+
+   .popup-button--custom {
+    height: 100%;
+   }
+
+   .help-text {
+    opacity: .65;
+    font-weight: 300;
+   }
+
+}
